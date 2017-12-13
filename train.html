@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trains Trains Trains</title>
+  
+
+
+  <!-- jQuery link -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- LINK TO FIREBASE GOES HERE -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+
+  <!-- javascript link -->
+  <script type="text/javascript" src="script.js"></script>
+
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyASiiQBwKtMFGruBimGhEoN9t2Iuzpy9sQ",
+    authDomain: "trainstrainstrains-sidd5100.firebaseapp.com",
+    databaseURL: "https://trainstrainstrains-sidd5100.firebaseio.com",
+    projectId: "trainstrainstrains-sidd5100",
+    storageBucket: "",
+    messagingSenderId: "679863304479"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+  html {
+  background-image: url('https://speckyboy.com/wp-content/uploads/2012/03/tiltshiftphotography36.jpg');
+}
+</script>
+
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <br>
+
+    <!-- Jumbotron -->
+    <div style= "background:#47464c !important" class="jumbotron">
+      <h1 style= "color:#dbd9e2" class="text-center">Choo Choo!!</h1>
+      <h3 style= "color:#dbd9e2" class="text-center">Anytime is Train Time</h3> 
+    </div>
+    <div class="row">
+
+
+      <!-- Current train Schedule-->
+      <!-- TODO get info  from "add-train" pushed here -->
+
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div style= "background:#47464c" class="panel-heading">
+            <h3 style= "color:#dbd9e2" class="panel-title">Current Train Schedule</h3>
+          </div>
+          <table class="table">
+            <thead>
+             <tr>
+              <th>Train Name</th>
+              <th>Frequency (min)</th>
+              <th>Next Arrival</th>
+              <th>Minutes Away</th>
+            </tr>
+          </thead>
+          <tbody id="trainTable">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Sign-Up Panel-->
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div style= "background:#47464c" class="panel-heading">
+          <h3 style= "color:#dbd9e2" class="panel-title">Add Train</h3>
+        </div>
+        <div class="panel-body">
+
+          <!-- Sign-up Form (note the various input "types")-->
+          <form role="form">
+            <div class="form-group">
+              <label for="name-input">Train Name:</label>
+              <input class="form-control" id="name-input" type="text">
+            </div>
+            <div class="form-group">
+              <label for="destination-input">Destination:</label>
+              <input class="form-control" id="destination-input" type="text">
+            </div>
+            <div class="form-group">
+              <label for="trainTime-input">First Train Time:</label>
+              <input class="form-control" id="trainTime-input" type="time">
+            </div>
+            <div class="form-group">
+              <label for="frequency-input">Frequency:</label>
+              <input class="form-control" id="frequency-input" type="number">
+            </div>
+            <button class="btn btn-info" id="add-train" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
